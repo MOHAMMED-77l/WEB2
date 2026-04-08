@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GPA Calculator with jQuery and Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> [cite: 545, 546]
+    <link rel="stylesheet" href="style.css"> [cite: 547]
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> [cite: 554]
+    <script src="script.js" defer></script> [cite: 562]
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">GPA Calculator</h1> [cite: 566, 567]
+        <div id="result" class="mt-3"></div> [cite: 568]
+        
+        <form id="gpaForm" class="mt-3"> [cite: 579]
+            <div id="courses">
+                <div class="course-row form-row mb-2"> [cite: 569, 570]
+                    <div class="col">
+                        <input type="text" name="course[]" class="form-control" placeholder="Course name" required> [cite: 571, 572]
+                    </div>
+                    <div class="col-2">
+                        <input type="number" name="credits[]" class="form-control" placeholder="Credits" min="1" required> [cite: 574, 575]
+                    </div>
+                    <div class="col-2">
+                        <select name="grade[]" class="form-control"> [cite: 603, 604]
+                            <option value="4.0">A</option> [cite: 605]
+                            <option value="3.0">B</option> [cite: 606]
+                            <option value="2.0">C</option> [cite: 607]
+                            <option value="1.0">D</option> [cite: 608]
+                            <option value="0.0">F</option> [cite: 609]
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <button type="button" id="addCourse" class="btn btn-secondary mb-3">+ Add Course</button> [cite: 613, 614, 617]
+            <button type="submit" class="btn btn-primary">Calculate GPA</button> [cite: 621, 623]
+        </form>
+    </div>
+</body>
+</html>
