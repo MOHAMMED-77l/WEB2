@@ -1,0 +1,6 @@
+body { font-family: Arial, sans-serif; margin: 20px; background-color: #e9ecef; }
+h1 { color: #007BFF; }
+.course-row { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; }
+table { border-collapse: collapse; margin-top: 16px; width: 50%; }
+table th, table td { border: 1px solid #ccc; padding: 8px 14px; text-align: center; }
+table th { background-color: #007BFF; color: white; }
