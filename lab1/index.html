@@ -1,41 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>GPA Calculator with jQuery and Bootstrap</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> [cite: 545, 546]
-    <link rel="stylesheet" href="style.css"> [cite: 547]
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> [cite: 554]
-    <script src="script.js" defer></script> [cite: 562]
-</head>
-<body>
-    <div class="container">
-        <h1 class="mt-5">GPA Calculator</h1> [cite: 566, 567]
-        <div id="result" class="mt-3"></div> [cite: 568]
-        
-        <form id="gpaForm" class="mt-3"> [cite: 579]
-            <div id="courses">
-                <div class="course-row form-row mb-2"> [cite: 569, 570]
-                    <div class="col">
-                        <input type="text" name="course[]" class="form-control" placeholder="Course name" required> [cite: 571, 572]
-                    </div>
-                    <div class="col-2">
-                        <input type="number" name="credits[]" class="form-control" placeholder="Credits" min="1" required> [cite: 574, 575]
-                    </div>
-                    <div class="col-2">
-                        <select name="grade[]" class="form-control"> [cite: 603, 604]
-                            <option value="4.0">A</option> [cite: 605]
-                            <option value="3.0">B</option> [cite: 606]
-                            <option value="2.0">C</option> [cite: 607]
-                            <option value="1.0">D</option> [cite: 608]
-                            <option value="0.0">F</option> [cite: 609]
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <button type="button" id="addCourse" class="btn btn-secondary mb-3">+ Add Course</button> [cite: 613, 614, 617]
-            <button type="submit" class="btn btn-primary">Calculate GPA</button> [cite: 621, 623]
-        </form>
-    </div>
-</body>
-</html>
+<! DOCTYPE html >
+2 <html lang ="en">
+3 <head >
+4 <meta charset ="UTF -8">
+5 <title > GPA Calculator with jQuery and Bootstrap </ title >
+6 <!- - Bootstrap CSS -->
+7 <link rel=" stylesheet " href =" https :// stackpath . bootstrapcdn . com/
+8 bootstrap /4.5.2/ css/ bootstrap .min. css">
+9 <link rel=" stylesheet " href =" style .css"><!- - jQuery -->
+11 <script src=" https :// code . jquery .com /jquery -3.6.0. min.js"> </ script >
+12 <!- - Bootstrap JS -->
+13 <script src=" https :// stackpath . bootstrapcdn .com/ bootstrap /
+14 4.5.2/ js/ bootstrap .min.js"> </ script >
+15 <script src=" script .js" defer > </ script >
+16 </ head >
+17 <body >
+18 <div class =" container ">
+19 <h1 class ="mt -5"> GPA Calculator </h1 >
+20 <div id=" result " class ="mt -3"> </div >
+21 <form id=" gpaForm " class ="mt -3">
+22 <div id=" courses ">
+23 <div class ="course - row form -row mb -2">
+24 <div class ="col ">
+25 <input type =" text " name =" course []" class ="form - control "
+26 placeholder =" Course name " required >
+27 </ div >
+28 <div class ="col -2">
+29 <input type =" number " name =" credits []" class ="form - control "
+30 placeholder =" Credits " min="1" required >
+31 </ div >
+32 <div class ="col -2">
+33 <select name =" grade []" class ="form - control ">
+34 <option value ="4.0">A </ option >
+35 <option value ="3.0">B </ option >
+36 <option value ="2.0">C </ option >
+37 <option value ="1.0">D </ option >
+38 <option value ="0.0">F </ option >
+39 </ select >
+40 </ div >
+41 </ div >
+42 </ div >
+43 <button type =" button " id=" addCourse "
+44 class ="btn btn - secondary mb -3">
+45 + Add Course
+46 </ button > <br >
+47 <button type =" submit " class ="btn btn - primary ">
+48 Calculate GPA
+49 </ button >
+50 </ form >
+51 </ div >
+52 </ body >
+53 </ html >
