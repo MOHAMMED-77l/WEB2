@@ -39,7 +39,19 @@ if ($totalCredits > 0) {
         $stmt2->bind_param("isdd", $result_id, $courses[$i], $credits[$i], $grades[$i]);
         $stmt2->execute();
     }
+// بناء جدول لعرض المواد في النتيجة (الجزء الثالث والرابع)
+    $tableHtml = '<table class="table table-sm mt-3"><thead><tr><th>Course</th><th>Credits</th><th>Grade</th></tr></thead><tbody>';
+    for ($i = 0; $i < count($courses); $i++) {
+        $tableHtml .= "<tr><td>{$courses[$i]}</td><td>{$credits[$i]}</td><td>{$grades[$i]}</td></tr>";
+    }
+    $tableHtml .= '</tbody></table>';
 
+    echo json_encode([
+        'success' => true,
+        'gpa' => $gpa,
+        'message' => "Saved! GPA = " . number_format($gpa, 2),
+        'tableHtml' => $tableHtml // أضف هذا السطر لكي يظهر الجدول في الصفحة
+    ]);
     echo json_encode([
         'success' => true,
         'gpa' => $gpa,
