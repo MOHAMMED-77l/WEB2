@@ -22,32 +22,32 @@ $('#gpaForm').submit(function (e) {
         type: 'POST',
         data: $(this).serialize(),
         dataType: 'json',
+// ابحث عن هذا الجزء في ملف script.js وقم بتحديثه
+success: function (res) {
+    if (res.success) {
+        let percent = (res.gpa / 4) * 100;
 
-        success: function (res) {
+        let color = "bg-danger";
+        if (res.gpa >= 3.7) color = "bg-success";
+        else if (res.gpa >= 3.0) color = "bg-info";
+        else if (res.gpa >= 2.0) color = "bg-warning";
 
-            if (res.success) {
+        $('#result').html(`
+            <div class="alert alert-success">${res.message}</div>
+            
+            <div class="progress mt-2">
+                <div class="progress-bar ${color}" style="width:${percent}%">
+                    ${res.gpa.toFixed(2)}
+                </div>
+            </div>
+            
+            <div class="mt-3">${res.tableHtml}</div> 
+        `);
 
-                let percent = (res.gpa / 4) * 100;
-
-                let color = "bg-danger";
-                if (res.gpa >= 3.7) color = "bg-success";
-                else if (res.gpa >= 3.0) color = "bg-info";
-                else if (res.gpa >= 2.0) color = "bg-warning";
-
-                $('#result').html(`
-                    <div class="alert alert-success">${res.message}</div>
-
-                    <div class="progress mt-2">
-                        <div class="progress-bar ${color}" style="width:${percent}%">
-                            ${res.gpa.toFixed(2)}
-                        </div>
-                    </div>
-                `);
-
-            } else {
-                $('#result').html(`<div class="alert alert-danger">${res.message}</div>`);
-            }
-        }
+    } else {
+        $('#result').html(`<div class="alert alert-danger">${res.message}</div>`);
+    }
+}
     });
 
 });
